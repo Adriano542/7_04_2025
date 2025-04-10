@@ -13,19 +13,44 @@ btn.addEventListener('click', function(){
 
 
 })*/
-// Tworzenie przycisku do zmiany koloru tekstu we wszystkich <p>
-document.getElementById("colorBtn").onclick = () => {
-    document.querySelectorAll("p").forEach(p => {
-        p.style.color = "blue";
-    });
-};
+// Wybieranie elementów
+const p1 = document.querySelector('#p1')
+const p2 = document.querySelector('#p2')
+const p3 = document.querySelector('#p3')
 
-// Zmiana tła drugiego akapitu
-document.getElementById("backgroundBtn").onclick = () => {
-    document.getElementById("p2").style.backgroundColor = "lightgray";
-};
+const changeTextColorBtn = document.querySelector('#changeTextColorBtn')
+const changeBackgroundBtn = document.querySelector('#changeBackgroundBtn')
+const changeFontWeightBtn = document.querySelector('#changeFontWeightBtn')
 
-// Zmiana grubości czcionki trzeciego akapitu
-document.getElementById("fontWeightBtn").onclick = () => {
-    document.getElementById("p3").style.fontWeight = "bold";
-};
+// Funkcja do zmiany koloru wszystkich <p>
+function changeTextColor(color) {
+    document.querySelectorAll('p').forEach(p => {
+        p.style.color = color
+    })
+}
+
+// Funkcja do zmiany tła drugiego akapitu
+function changeBackground(color) {
+    p2.style.backgroundColor = color
+}
+
+// Funkcja do zmiany grubości czcionki trzeciego akapitu
+function changeFontWeight(weight) {
+    p3.style.fontWeight = weight
+}
+
+// Obsługa kliknięć
+changeTextColorBtn.addEventListener('click', function () {
+    changeTextColor('blue')
+    this.style.backgroundColor = '#ff0'
+})
+
+changeBackgroundBtn.addEventListener('click', function () {
+    changeBackground('lightgray')
+    this.style.backgroundColor = '#ff0'
+})
+
+changeFontWeightBtn.addEventListener('click', function () {
+    changeFontWeight('bold')
+    this.style.backgroundColor = '#ff0'
+})

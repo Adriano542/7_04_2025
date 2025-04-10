@@ -14,29 +14,18 @@ btn.addEventListener('click', function(){
 
 })*/
 // Tworzenie przycisku do zmiany koloru tekstu we wszystkich <p>
-const colorButton = document.createElement("button");
-colorButton.textContent = "Zmień kolor tekstu";
-colorButton.onclick = () => {
+document.getElementById("colorBtn").onclick = () => {
     document.querySelectorAll("p").forEach(p => {
         p.style.color = "blue";
     });
 };
-document.body.appendChild(colorButton);
 
-// Tworzenie przycisku do zmiany tła drugiego elementu
-const backgroundButton = document.createElement("button");
-backgroundButton.textContent = "Zmień tło drugiego akapitu";
-backgroundButton.onclick = () => {
-    const secondP = document.getElementById("p2");
-    secondP.style.backgroundColor = "lightgray";
+// Zmiana tła drugiego akapitu
+document.getElementById("backgroundBtn").onclick = () => {
+    document.getElementById("p2").style.backgroundColor = "lightgray";
 };
-document.body.appendChild(backgroundButton);
 
-// Tworzenie przycisku do zmiany grubości czcionki trzeciego elementu
-const fontWeightButton = document.createElement("button");
-fontWeightButton.textContent = "Zmień grubość czcionki trzeciego akapitu";
-fontWeightButton.onclick = () => {
-    const thirdP = document.getElementById("p3");
-    thirdP.style.fontWeight = "bold";
+// Zmiana grubości czcionki trzeciego akapitu
+document.getElementById("fontWeightBtn").onclick = () => {
+    document.getElementById("p3").style.fontWeight = "bold";
 };
-document.body.appendChild(fontWeightButton);

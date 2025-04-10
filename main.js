@@ -42,15 +42,15 @@ function changeFontWeight(weight) {
 // Obsługa kliknięć
 changeTextColorBtn.addEventListener('click', function () {
     changeTextColor('blue')
-    this.style.backgroundColor = '#ff0'
+    this.style.backgroundColor = '#red'
 })
 
 changeBackgroundBtn.addEventListener('click', function () {
     changeBackground('lightgray')
-    this.style.backgroundColor = '#ff0'
+    this.style.backgroundColor = '#green'
 })
 
 changeFontWeightBtn.addEventListener('click', function () {
     changeFontWeight('bold')
-    this.style.backgroundColor = '#ff0'
+    this.style.backgroundColor = '#blue'
 })

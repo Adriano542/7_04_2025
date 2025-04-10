@@ -18,9 +18,9 @@ const p1 = document.querySelector('#p1')
 const p2 = document.querySelector('#p2')
 const p3 = document.querySelector('#p3')
 
-const changeTextColorBtn = document.querySelector('#changeTextColorBtn')
-const changeBackgroundBtn = document.querySelector('#changeBackgroundBtn')
-const changeFontWeightBtn = document.querySelector('#changeFontWeightBtn')
+const changeTextColorBtn = document.querySelector('#colorBtn')
+const changeBackgroundBtn = document.querySelector('#backgroundBtn')
+const changeFontWeightBtn = document.querySelector('#fontWeightBtn')
 
 // Funkcja do zmiany koloru wszystkich <p>
 function changeTextColor(color) {
@@ -42,15 +42,16 @@ function changeFontWeight(weight) {
 // Obsługa kliknięć
 changeTextColorBtn.addEventListener('click', function () {
     changeTextColor('blue')
-    this.style.backgroundColor = '#red'
+    this.style.backgroundColor = 'yellow'
 })
 
 changeBackgroundBtn.addEventListener('click', function () {
     changeBackground('lightgray')
-    this.style.backgroundColor = '#green'
+    this.style.backgroundColor = 'green'
 })
 
 changeFontWeightBtn.addEventListener('click', function () {
     changeFontWeight('bold')
-    this.style.backgroundColor = '#blue'
+    this.style.backgroundColor = 'blue'
 })
+

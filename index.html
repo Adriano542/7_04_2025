@@ -3,10 +3,10 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Document</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js' defer></script>
+    <!--<script src='main.js' defer></script> -->
 </head>
 <body>
     <!--<div class="container">
@@ -20,7 +20,11 @@
     </div>
 -->
 
-    <div class="container">
+
+
+
+
+   <!-- <div class="container">
         <p id="p1">To jest pierwszy akapit.</p>
         <button id="colorBtn">Zmień kolor tekstu</button>
         <p id="p2">To jest drugi akapit.</p>
@@ -28,5 +32,35 @@
         <p id="p3">To jest trzeci akapit.</p>
         <button id="fontWeightBtn">Zmień grubość czcionki trzeciego akapitu</button>
     </div> 
+    -->
+
+
+
+
+
+    <div class="container">
+        <header>
+            <h1>
+                Tworzenie elementów
+            </h1>
+        </header>
+        <main>
+            <button>Dodaj element</button>
+        </main>
+        <footer>
+            <p>&copy; Me XXI c.</p>
+        </footer>
+    </div>
+
+    <script>
+        const btn = document.querySelector('button');
+        const display = document.querySelector('main');
+        btn.addEventListener('click', function(){
+            const newElement = document.createElement('p');
+            newElement.style.color = '#f00';
+            newElement.textContent = 'Nowy element'
+            display.append(newElement);
+        })
+    </script>
 </body>
 </html>

@@ -60,12 +60,12 @@
             const newElement = document.createElement('p');
             newElement.style.color = '#f00';
             newElement.textContent = 'Nowy element'
-            display.append(newElement);
+        /* display.append(newElement);*/
         
 
             const newElementH3 = document.createElement('h3');
             newElementH3.style.color.backgroundColor = '#ff0';
-            const h3TextNode = document.createTextNode('Jakiś tytuł $(i)');
+            const h3TextNode = document.createTextNode('Jakiś tytuł' $(i));
             newElementH3.addEventListener('click', function (evt){
                 console.log(this);
                 this.remove()
@@ -76,5 +76,6 @@
             i++;
         });
     </script>
+    dodaj przycisk z napisem "usuń" do elementu h3 po kliknięciu którego zostanie usunięty cały element h3, wykorzystaj parentNode
 </body>
 </html>

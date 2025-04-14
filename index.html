@@ -55,12 +55,22 @@
     <script>
         const btn = document.querySelector('button');
         const display = document.querySelector('main');
+
         btn.addEventListener('click', function(){
             const newElement = document.createElement('p');
             newElement.style.color = '#f00';
             newElement.textContent = 'Nowy element'
             display.append(newElement);
-        })
+        
+
+            const newElementH3 = document.createElement('h3');
+            newElementH3.style.color.backgroundColor = '#ff0';
+            const h3TextNode = document.createTextNode('Jakiś tytuł');
+
+            newElementH3.append(h3TextNode);
+
+            display.append(newElementH3, newElementP, 'dodany tekst');
+        });
     </script>
 </body>
 </html>
